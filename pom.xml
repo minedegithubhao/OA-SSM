@@ -162,18 +162,33 @@
             <artifactId>spring-boot-autoconfigure</artifactId>
             <version>2.6.3</version>
         </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-test</artifactId>-->
+<!--            <version>2.6.3</version>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
+
+        <!-- https://mvnrepository.com/artifact/org.mybatis.generator/mybatis-generator-core -->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-test</artifactId>
-            <version>2.6.3</version>
-            <scope>test</scope>
+            <groupId>org.mybatis.generator</groupId>
+            <artifactId>mybatis-generator-core</artifactId>
+            <version>1.4.0</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.freemarker/freemarker -->
+        <dependency>
+            <groupId>org.freemarker</groupId>
+            <artifactId>freemarker</artifactId>
+            <version>2.3.31</version>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-            <version>5.8.2</version>
+            <artifactId>junit-jupiter</artifactId>
+            <version>RELEASE</version>
             <scope>test</scope>
         </dependency>
+
     </dependencies>
 
     <build>

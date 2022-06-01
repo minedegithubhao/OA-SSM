@@ -2,15 +2,13 @@ package com.cxd.controller;
 
 import java.util.List;
 
-import com.cxd.entity.Book;
-import com.cxd.service.BookService;
-import com.cxd.service.impl.BookServiceImpl;
 import com.cxd.dto.AppointExecution;
 import com.cxd.dto.Result;
+import com.cxd.entity.system.Book;
 import com.cxd.enums.AppointStateEnum;
+import com.cxd.service.BookService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -25,14 +23,13 @@ import com.cxd.exception.RepeatAppointException;
 import javax.annotation.Resource;
 
 @Controller
-@RequestMapping("/book") // url:/模块/资源/{id}/细分 /seckill/list
+@RequestMapping("/book")
 public class BookController {
 
-	private Logger logger = LoggerFactory.getLogger(this.getClass());
+	private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
 	@Resource
-//	@Qualifier("BookServiceImpl")
-	private BookService bookService =new BookServiceImpl();
+	private BookService bookService;
 
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
 	private String list(Model model) {

@@ -1,5 +1,7 @@
 package com.cxd.entity;
 
+import com.cxd.entity.system.Book;
+
 import java.util.Date;
 
 /**

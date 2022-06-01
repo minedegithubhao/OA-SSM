@@ -1,37 +1,20 @@
 package com.cxd.service;
 
 import com.cxd.dto.AppointExecution;
-import com.cxd.entity.Book;
+import com.cxd.entity.system.Book;
 
 import java.util.List;
 
 /**
- * 业务接口：站在"使用者"角度设计接口 三个方面：方法定义粒度，参数，返回类型（return 类型/异常）
+ * @author cxd
+ * @description:
+ * @create: 2022-06-01 08:15
  */
 public interface BookService {
 
-	/**
-	 * 查询一本图书
-	 * 
-	 * @param bookId
-	 * @return
-	 */
-	Book getById(long bookId);
+    List<Book> getList();
 
-	/**
-	 * 查询所有图书
-	 * 
-	 * @return
-	 */
-	List<Book> getList();
+    Book getById(Long bookId);
 
-	/**
-	 * 预约图书
-	 * 
-	 * @param bookId
-	 * @param studentId
-	 * @return
-	 */
-	AppointExecution appoint(long bookId, long studentId);
-
+    AppointExecution appoint(Long bookId, Long studentId);
 }
